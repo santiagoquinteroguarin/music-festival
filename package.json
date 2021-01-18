@@ -1,0 +1,15 @@
+{
+  "name": "music-festival",
+  "version": "1.0.0",
+  "description": "Music Festival",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santiago Quintero Guarin",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
