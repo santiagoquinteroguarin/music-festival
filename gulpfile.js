@@ -25,7 +25,9 @@ function minificarcss() {
 
 // escucha los cambios que van teniendo los archivos
 function watchFiles() {
-    watch('src/scss/app.scss', css)
+    // * = la carpeta actual
+    // ** = todos los archivos con esas extensión
+    watch('src/scss/**/*.scss', css);
 }
 
 exports.watchFiles = watchFiles;

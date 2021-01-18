@@ -1,13 +1,4 @@
-$fontMain: 'Arial';
-
-body {
-    font-family: $fontMain;
-}
-
-h1 {
-    font-family: $fontMain;
-}
-
-p {
-    font-family: $fontMain;
-}
+@import './base/normalize';
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
+@import './base/variables';
+@import './base/globales';
