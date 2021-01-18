@@ -1,0 +1,20 @@
+@mixin phone {
+    @media (min-width: $phone) {
+        // directiva que permite inyectarle un bloque de codígo
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        // directiva que permite inyectarle un bloque de codígo
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        // directiva que permite inyectarle un bloque de codígo
+        @content;
+    }
+}

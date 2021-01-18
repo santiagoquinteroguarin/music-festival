@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock & EDM Festival</title>
+    <title>Tomorrowland</title>
     <link rel="stylesheet" href="./build/css/app.css">
 </head>
 <body>
-    <h1>Hola Mundo!</h1>
+    <header class="header">
+        <div class="container content-header">
+            <h1>Tomorrowland</h1>
+
+            <nav class="main-navigation">
+                <a href="#">Line Up</a>
+                <a href="#">Gallery</a>
+                <a href="#">Store</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="container content-video">
+                <h2>Tomorrowland
+                    <span>31.12.2021, Belgium</span>
+                </h2>
+            </div>
+        </div>
+        <video autoplay muted loop>
+            <source src="./video/concierto.mp4" type="video/mp4">
+            <source src="./video/concierto.ogg" type="video/ogg">
+            <source src="./video/concierto.webm" type="video/webm">
+        </video>
+    </div>
 </body>
 </html>
