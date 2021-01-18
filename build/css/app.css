@@ -355,6 +355,7 @@ body {
 }
 
 p {
+  margin: 0;
   font-size: 2rem;
   color: #000000;
 }
@@ -487,4 +488,38 @@ h3 {
   background-color: #000000;
   font-size: 2rem;
   padding: 1rem 2rem;
+}
+
+.about-festival {
+  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .about-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-festival {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+}
+
+.content-festival h2 {
+  font-size: 3rem;
+}
+
+.content-festival .date {
+  color: rgba(255, 25, 0, 0.562);
+  font-weight: 500;
+}
+
+.content-festival .text {
+  line-height: 1.5;
 }

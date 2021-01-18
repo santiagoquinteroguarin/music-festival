@@ -1,0 +1,26 @@
+.about-festival {
+    padding: 2rem 0;
+
+    @include tablet {
+        @include grid(2, $separacion);
+    }
+}
+
+.content-festival {
+    @include tablet {
+        @include flex(column, center, null, .8rem);
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .date {
+        color: rgba(255, 25, 0, 0.562);
+        font-weight: $bold;
+    }
+
+    .text {
+        line-height: 1.5;
+    }
+}

@@ -1,5 +1,7 @@
-const { series, src, dest, watch } = require('gulp');
+const { series, src, dest, watch, parallel } = require('gulp');
 const sass = require('gulp-sass');
+const imagemin = require('gulp-imagemin');
+const notify = require('gulp-notify');
 
 // función que compila SASS
 function css() {
@@ -23,6 +25,16 @@ function minificarcss() {
         .pipe( dest('./build/css'))
 }
 
+// minificar imagenes
+function images() {
+    return src('./src/img/**/*')
+        .pipe(imagemin())
+        // destino donde van a quedar las imagenes minificadas
+        .pipe(dest('./build/img'))
+        // notifica
+        .pipe(notify({message: 'Imagen minificada'}));
+}
+
 // escucha los cambios que van teniendo los archivos
 function watchFiles() {
     // * = la carpeta actual
@@ -33,3 +45,5 @@ function watchFiles() {
 exports.watchFiles = watchFiles;
 exports.css = css;
 exports.minificarcss = minificarcss;
+exports.images = images;
+exports.default = series( css, images, watchFiles);
