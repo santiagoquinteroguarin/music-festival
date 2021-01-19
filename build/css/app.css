@@ -392,6 +392,14 @@ h3 {
   font-size: 3rem;
 }
 
+.bg-yellow {
+  background-color: #ffe227;
+}
+
+.bg-green {
+  background-color: #16c79a;
+}
+
 .header {
   background-color: #000000;
 }
@@ -522,4 +530,76 @@ h3 {
 
 .content-festival .text {
   line-height: 1.5;
+}
+
+.lineup {
+  background-color: #0C0C0C;
+  padding: 5rem 0;
+}
+
+.lineup h3,
+.lineup p {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.lineup .day {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .stage-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.stage-container .stage {
+  padding-top: 2.5rem;
+}
+
+.stage-container .stage-name {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stage-container .stage-name:after {
+  content: '';
+  display: block;
+  width: 20rem;
+  height: 10rem;
+  margin: 2rem auto 0 auto;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.stage-name:after {
+  background-image: url("/build/img/icono_edm.png");
+}
+
+.calendar {
+  padding: 0;
+  list-style: none;
+}
+
+.calendar li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+
+.calendar li span {
+  font-weight: 400;
+}
+
+/* odd --> todos los numeros impares */
+.bg-green .calendar li:nth-child(odd) {
+  background-color: #119976;
+}
+
+.bg-yellow .calendar li:nth-child(odd) {
+  background-color: #f3d200;
 }

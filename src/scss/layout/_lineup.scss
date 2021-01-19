@@ -1,0 +1,73 @@
+.lineup {
+    background-color: #0C0C0C;
+    padding: $separacion 0;
+
+    h3,
+    p {
+        text-align: center;
+        color: $white-strong;
+    }
+
+    .day {
+        text-transform: uppercase;
+        margin: $separacion 0;
+    }
+}
+
+.stage-container {
+    @include tablet {
+        @include grid(2, $separacion);
+    }
+
+    .stage {
+        padding-top: $separacion / 2;
+    }
+
+    .stage-name {
+        color: $black;
+        font-size: 2rem;
+        font-weight: $extra-bold;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 10rem;
+            margin: 2rem auto 0 auto;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.stage-name {
+    &:after {
+        background-image: url('/build/img/icono_edm.png');
+    }
+}
+
+.calendar {
+    padding: 0;
+    list-style: none;
+
+    li {
+        padding: $separacion / 2;
+        font-weight: $extra-bold;
+
+        span {
+            font-weight: $regular;
+        }
+    }
+}
+
+/* odd --> todos los numeros impares */
+.bg-green .calendar li:nth-child(odd) {
+    // lighten --> hace el color mas claro
+    // darken --> solo existe en sass y le da más oscuridad a cierto color
+    background-color: darken($green, 10);
+}
+
+.bg-yellow .calendar li:nth-child(odd) {
+    background-color: darken($yellow, 10);
+}
