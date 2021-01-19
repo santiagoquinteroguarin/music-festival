@@ -1,5 +1,5 @@
 .lineup {
-    background-color: #0C0C0C;
+    background-color: $black2-light;
     padding: $separacion 0;
 
     h3,
@@ -62,10 +62,10 @@
 }
 
 /* odd --> todos los numeros impares */
-.bg-green .calendar li:nth-child(odd) {
+.bg-red .calendar li:nth-child(odd) {
     // lighten --> hace el color mas claro
     // darken --> solo existe en sass y le da más oscuridad a cierto color
-    background-color: darken($green, 10);
+    background-color: darken($red, 10);
 }
 
 .bg-yellow .calendar li:nth-child(odd) {

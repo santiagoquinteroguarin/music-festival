@@ -15,9 +15,9 @@
             <h1>Tomorrowland</h1>
 
             <nav class="main-navigation">
-                <a href="#">Line Up</a>
-                <a href="#">Gallery</a>
-                <a href="#">Store</a>
+                <a href="#lineup">Line Up</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#tickets">Tickets</a>
             </nav>
         </div>
     </header>
@@ -54,7 +54,7 @@
     </div>
 
     <!-- Line Up -->
-    <section class="lineup">
+    <section id="lineup" class="lineup">
         <h3>Line Up</h3>
 
         <p class="day">Friday 21</p>
@@ -71,7 +71,7 @@
                 </ul>
             </div>
 
-            <div class="stage deep-techno bg-green">
+            <div class="stage deep-techno bg-red">
                 <p class="stage-name">Stage Deep Techno</p>
                 <ul class="calendar">
                     <li>24:00 <span>Basic Channel</span></li>
@@ -86,7 +86,7 @@
 
         <p class="day">Saturday 22</p>
         <div class="container stage-container">
-            <div class="stage house-music bg-green">
+            <div class="stage house-music bg-red">
                 <p class="stage-name">Stage Deep House</p>
                 <ul class="calendar">
                     <li>24:00 <span>David Guetta</span></li>
@@ -112,11 +112,99 @@
         </div>
     </section>
 
-    <section class="gallery container">
+    <!-- Gallery -->
+    <section id="gallery" class="gallery container">
         <h3>Gallery</h3>
 
         <ul class="gallery-images"></ul>
     </section>
+
+    <!-- Tickets -->
+    <section id="tickets" class="tickets">
+        <h3>Tickets</h3>
+
+        <div class="container container-tickets">
+            <div class="basic plan">
+                <p>1 Day Pass</p>
+
+                <table class="pass">
+                    <thead>
+                        <tr>
+                            <th>
+                                Includes
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Access to all stages
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Food and Drink
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                $100
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="premium plan">
+                <p>2 Days Pass</p>
+
+                <table class="pass">
+                    <thead>
+                        <tr>
+                            <th>
+                                Includes
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Access to all stages
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Food and Drink
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                event shirt
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Access VIP
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                $180
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <p>Tomorrowland. Todos Los Derechos Reservados &copy;</p>
+    </footer>
 
     <script src="/build/js/bundle.js"></script>
 </body>
