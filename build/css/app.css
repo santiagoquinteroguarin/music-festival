@@ -82,7 +82,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -404,6 +405,7 @@ h3 {
 }
 
 .header {
+  position: relative;
   background-color: #000000;
 }
 
@@ -434,6 +436,12 @@ h3 {
   .header h1 {
     margin-bottom: 0;
   }
+}
+
+.fijo {
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 .3rem .4rem #4444;
 }
 
 .main-navigation {
@@ -470,9 +478,7 @@ h3 {
   width: 100%;
   height: 100%;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff1a00+1,ff1a00+100&0.22+0,0.72+100 */
-  background: -moz-linear-gradient(-45deg, rgba(255, 26, 0, 0.22) 0%, rgba(255, 26, 0, 0.23) 1%, rgba(255, 26, 0, 0.72) 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(255, 26, 0, 0.22) 0%, rgba(255, 26, 0, 0.23) 1%, rgba(255, 26, 0, 0.72) 100%);
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(135deg, rgba(255, 26, 0, 0.22) 0%, rgba(255, 26, 0, 0.23) 1%, rgba(255, 26, 0, 0.72) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -498,7 +504,13 @@ h3 {
   flex-direction: column;
   align-items: flex-start;
   color: #FFFFFF;
-  font-size: 6rem;
+  font-size: 4.3rem;
+}
+
+@media (min-width: 768px) {
+  .content-video h2 {
+    font-size: 6rem;
+  }
 }
 
 .content-video h2 span {
@@ -737,20 +749,14 @@ h3 {
 }
 
 .footer {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff1a00+1,ff1a00+100&0.22+0,0.72+100 */
-  background: -moz-linear-gradient(-45deg, rgba(255, 26, 0, 0.22) 0%, rgba(255, 26, 0, 0.23) 1%, rgba(255, 26, 0, 0.72) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(255, 26, 0, 0.22) 0%, rgba(255, 26, 0, 0.23) 1%, rgba(255, 26, 0, 0.72) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(255, 26, 0, 0.22) 0%, rgba(255, 26, 0, 0.23) 1%, rgba(255, 26, 0, 0.72) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#38ff1a00', endColorstr='#b8ff1a00',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background-color: #000000;
   padding: 1.25rem;
   text-align: center;
 }
 
 .footer p {
-  color: #FFFFFF;
+  color: #FFFFFFB3;
   margin: 0;
 }
+
+/*# sourceMappingURL=app.css.map */

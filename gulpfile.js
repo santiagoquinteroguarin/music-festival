@@ -5,6 +5,18 @@ const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 const concat = require('gulp-concat');
 
+// Utilidades CSS 
+// agregar prefijos
+const autoprefixer = require('autoprefixer');
+// agregar procesamiento a nuestro css 
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+
+// Utilidades JS
+const terser = require('gulp-terser-js');
+const rename = require('gulp-rename');
+
 const paths = {
     images: './src/img/**/*',
     scss: './src/scss/**/*.scss',
@@ -15,10 +27,15 @@ const paths = {
 function css() {
     // src --> busca el archivo a compilar
     return src(paths.scss)
+        .pipe(sourcemaps.init())
         // compilar a sass
         .pipe(sass({
             outputStyle: 'expanded'
         }))
+        // autoprefixer - realizar mejoras
+        .pipe(postcss(autoprefixer(), cssnano()))
+        // crear un mapa en un nuevo archivo para saber en que archivos debemos hacer cambios futuros
+        .pipe(sourcemaps.write('.'))
         // dest --> lugar donde va guardar lo compilado
         .pipe( dest('./build/css'))
 }
@@ -36,7 +53,12 @@ function minificarcss() {
 // JS --> concat sirve para compilar todos los archivos js juntos
 function javascript() {
     return src(paths.js)
+        .pipe(sourcemaps.init())
         .pipe(concat('bundle.js'))
+        // codigo optimizado para producción
+        .pipe(terser())
+        .pipe(sourcemaps.write('.'))
+        .pipe(rename({suffix: '.min'}))
         .pipe(dest('./build/js'));
 }
 
